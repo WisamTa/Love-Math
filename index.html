@@ -1,57 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- font awesome and google fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-    <title>Love Maths</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="A math game made with Javascript"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<title>Love Maths</title>
 </head>
-
 <body>
     <h1 class="heading">
-        <img class="logo" src="assets/images/apple-touch-icon.png" alt="logo"> Love Maths
+        <img src="assets/images/logo.png" alt="Heart with maths operators" class="logo"> Love Maths
     </h1>
 
     <div class="game-area">
         <div class="controls-area">
-            <button class="btn btn--big btn--green">
+            <button data-type="addition" class="btn btn--big btn--green">
                 <i class="fas fa-plus"></i>
             </button>
-            <button class="btn btn--big btn--blue">
-                <i class="fas fa-minus"></i>
-            </button>
-            <button class="btn btn--big btn--orange">
-                <i class="fas fa-times"></i>
-            </button>
-            <button class="btn btn--big btn--red">
-                <i class="fas fa-divide"></i>
-            </button>
+            <button data-type="subtraction" class="btn btn--big btn--blue"><i class="fas fa-minus"></i></button>
+            <button data-type="multiplication" class="btn btn--big btn--orange"><i class="fas fa-times"></i></button>
+            <button data-type="division" class="btn btn--big btn--red"><i class="fas fa-divide"></i></button>
         </div>
         <div class="question-area">
             <span id="operand1">0</span>
-            <span id="operator">x</span>
+            <span id="operator">+</span>
             <span id="operand2">0</span>
             <span>=</span>
             <p class="answer-message">Enter Answer:</p>
-            <input id="answer-box" type="number">
+            <input type="number" name="" id="answer-box">
         </div>
-        <button class="btn btn--gray">Submit Answer</button>
+        <button data-type="submit" class="btn btn--gray">Submit answer</button>
     </div>
 
     <div class="score-area">
-        <p class="scores">Correct Answers <span id="score">0</span></p>
-        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+        <p class="scores">Correct answers: <span id="score">0</span></p>
+        <p class="scores">Incorrect anwsers: <span id="incorrect">0</span></p>
     </div>
 
-    <script src="assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
-
 </html>
